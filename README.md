@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# Today I Learned
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to **Today I Learned**, a web app where users can document daily learning experiences, making it easy to keep track of interesting things learned each day. The platform allows users to create, view, and interact with posts that summarize their learnings.
 
-## Available Scripts
+## Website
 
-In the project directory, you can run:
+Visit the live version of the app [here](https://todayilearned-hala.netlify.app/).
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Add New Learnings**: Users can post new learnings or insights they've gained each day.
+- **View Past Learnings**: Users can view a list of all previous posts in chronological order.
+- **Edit/Delete Posts**: Easily manage your learning posts by editing or deleting entries as needed.
+- **Responsive Design**: The app is fully responsive, offering a smooth experience across devices, including mobile and desktop.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+The project is built with:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **HTML5**
+- **CSS3**
+- **JavaScript (ES6+)**
+- **React.js**: For building the user interface.
+- **Supabase**: Used as the backend for handling the database and authentication.
+- **Netlify**: Deployed the app for hosting.
 
-### `npm run build`
+## Setup Instructions
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To run this project locally, follow these steps:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/today-I-learned.git
+   cd today-I-learned
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Setup Instructions
 
-### `npm run eject`
+To run this project locally, follow these steps:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 2. Install dependencies:
+Make sure you have [Node.js](https://nodejs.org/) installed, then run:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 3. Add environment variables:
+Create a `.env` file in the root of the project and add your **Supabase** credentials:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+REACT_APP_SUPABASE_URL=your-supabase-url
+REACT_APP_SUPABASE_ANON_KEY=your-supabase-anon-key
+```
+### 4. Run the project:
+Start the development server:
 
-## Learn More
+```bash
+npm start
+```
+Your app should now be running on http://localhost:3000.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 5. Build for production:
+To create a production-ready build, run:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm run build
+```
 
-### Code Splitting
+### 6. Folder Structure
+Here's a simplified overview of the project structure:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+today-I-learned/
+├── public/                # Static assets
+├── src/                   # Source code
+│   ├── components/        # React components
+│   ├── supabase.js        # Supabase client setup
+│   └── App.js             # Main app component
+├── .env                   # Environment variables (not included in Git)
+├── .gitignore             # Files and directories ignored by Git
+├── package.json           # Dependencies and scripts
+└── README.md              # Project documentation
+```
+### How It Works
 
-### Analyzing the Bundle Size
+- **Supabase Integration**: The app uses Supabase to handle user data and posts. Each post is saved to a Supabase database, making it easy to store and retrieve posts in real-time.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Frontend**: The frontend is built with React.js, utilizing reusable components and React hooks for state management.
 
-### Making a Progressive Web App
+### Future Improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **User Authentication**: Implement user login so users can manage their own learning posts securely.
+- **Search Functionality**: Add a feature to search through the learnings by keyword or category.
+- **Categories/Tags**: Enable users to categorize their learnings for easier organization.
+- **Dark Mode**: Add a toggle for light/dark themes to enhance the user experience.
 
-### Advanced Configuration
+### Contributions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Contributions are welcome! If you want to improve the project or fix a bug, feel free to fork the repository, create a new branch, and submit a pull request.
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
